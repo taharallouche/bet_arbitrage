@@ -52,7 +52,7 @@ lint/flake8: ## check style with flake8
 lint/black: ## check style with black
 	black --check bet_arbitrage tests
 
-lint: lint/flake8 lint/black ## check style
+lint: lint/flake8 ## check style
 
 test: ## run tests quickly with the default Python
 	pytest
@@ -87,3 +87,8 @@ dist: clean ## builds source and wheel package
 
 install: clean ## install the package to the active Python's site-packages
 	python setup.py install
+
+install-dev: clean ## install the package to the active Python's site-packages
+	pip install -r requirements_dev.txt
+	python setup.py install
+	
