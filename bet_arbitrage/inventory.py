@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from enum import Enum
+from typing import Callable
 
 
 @dataclass(frozen=True)
@@ -16,8 +17,8 @@ class _FOOTBALL_LINEAR_PROG:
         z <= d * x3
     """
 
-    obj = [0, 0, 0, -1]
-    A_ub = lambda odds: [  # noqa: E731
+    obj: list = [0, 0, 0, -1]
+    A_ub: Callable = lambda odds: [  # noqa: E731
         [1 - odds[0], 1, 1, 0],
         [1, 1 - odds[1], 1, 0],
         [1, 1, 1 - odds[2], 0],
@@ -27,11 +28,11 @@ class _FOOTBALL_LINEAR_PROG:
         [0, 0, -odds[2], 1],
     ]
 
-    b_ub = lambda budget: [0, 0, 0, budget, 0, 0, 0]  # noqa: E731
+    b_ub: Callable = lambda budget: [0, 0, 0, budget, 0, 0, 0]  # noqa: E731
 
 
 class Sport(Enum):
-    football = "football"
+    football: str = "football"
 
 
 FOOTBALL_LINEAR_PROG = _FOOTBALL_LINEAR_PROG()
