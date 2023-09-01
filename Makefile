@@ -52,7 +52,10 @@ lint/flake8: ## check style with flake8
 lint/black: ## check style with black
 	black --check bet_arbitrage tests
 
-lint: lint/flake8 ## check style
+lint/typing: ## check typing with mypy
+	python3 -m mypy bet_arbitrage
+
+lint: lint/flake8 lint/typing ## check style
 
 test: ## run tests quickly with the default Python
 	pytest

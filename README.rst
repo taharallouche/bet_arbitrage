@@ -2,16 +2,17 @@
 bet_arbitrage
 =============
 
+.. image:: https://github.com/ruizdesotto/data_cliff/actions/workflows/github-actions-pr.yml/badge.svg
+    :target: https://github.com/ruizdesotto/data_cliff/actions?query=branch%3Amain
+    :alt: CI Status
 
-.. image:: https://img.shields.io/pypi/v/bet_arbitrage.svg
-        :target: https://pypi.python.org/pypi/bet_arbitrage
+.. image:: http://www.mypy-lang.org/static/mypy_badge.svg
+    :target: http://mypy-lang.org/
+    :alt: mypy
 
-.. image:: https://img.shields.io/travis/taharallouche/bet_arbitrage.svg
-        :target: https://travis-ci.com/taharallouche/bet_arbitrage
-
-.. image:: https://readthedocs.org/projects/bet-arbitrage/badge/?version=latest
-        :target: https://bet-arbitrage.readthedocs.io/en/latest/?version=latest
-        :alt: Documentation Status
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+    :alt: black
 
 
 

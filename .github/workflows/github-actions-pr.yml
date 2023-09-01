@@ -26,7 +26,7 @@ jobs:
     - name: Install dependencies
       run: |
         make install-dev
-    - name: Lint with flake8
+    - name: Lint with flake8 and type check with mypy
       run: |
         make lint
     - name: Test with pytest
